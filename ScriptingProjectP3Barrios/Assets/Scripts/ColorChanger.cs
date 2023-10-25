@@ -29,7 +29,35 @@ public class ColorChanger : MonoBehaviour
     }
 }
 
-    
-    
+public class VariablesAndFunctions : MonoBehaviour
+{
+    int myInt = 5;
 
 
+    void Start()
+    {
+        myInt = MultiplyByTwo(myInt);
+        Debug.Log(myInt);
+    }
+
+
+    int MultiplyByTwo(int number)
+    {
+        int result;
+        result = number * 2;
+        return result;
+    }
+}
+public class UpdateAndFixedUpdate : MonoBehaviour
+{
+    void FixedUpdate()
+    {
+        Debug.Log("FixedUpdate time :" + Time.deltaTime);
+    }
+
+
+    void Update()
+    {
+        Debug.Log("Update time :" + Time.deltaTime);
+    }
+}
